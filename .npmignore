@@ -1,0 +1,5 @@
+src
+webpack.config.js
+testing
+node_modules
+.parcel-cache

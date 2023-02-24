@@ -1,12 +1,15 @@
 {
   "name": "mpesapay",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "A module for processing MPESA payments",
-  "main": "index.js",
   "type": "module",
+  "source": "src/index.js",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+ 
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "watch": "parcel watch",
+    "build": "parcel build"
   },
   "repository": {
     "type": "git",
@@ -28,7 +31,9 @@
   "homepage": "https://github.com/justinelut/mpesapay#readme",
   "dependencies": {
     "axios": "^1.3.4",
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "js-base64": "^3.7.5"
+  },
+  "devDependencies": {
+    "parcel": "^2.8.3"
   }
 }
