@@ -1,6 +1,6 @@
 {
   "name": "mpesapay",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "A module for processing MPESA payments",
   "type": "module",
   "types": "dist/types.d.ts",
