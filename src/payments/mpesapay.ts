@@ -30,6 +30,8 @@ class MpesaPay {
         : 'https://sandbox.safaricom.co.ke';
   }
 
+  //stkpush method for directly initiating a pop to the specified phonenumber with the amount to payed
+
   public async stkPush(
     amount: string,
     phoneNumber: string,
@@ -68,6 +70,8 @@ class MpesaPay {
       return null;
     }
   }
+
+
 
   private async generateAccessToken(): Promise<string | null> {
     const credentials = Buffer.from(

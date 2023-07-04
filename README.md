@@ -142,5 +142,4 @@ Justine Gichana: https://github.com/justinelut
 
 Github URL: https://github.com/justinelut/mpesapay
 
-Documentation URL: https://verixr.com/mpesapay-docs/
-
+Documentation URL: https://mpesapay.verixr.com/

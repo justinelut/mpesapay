@@ -1,5 +1,6 @@
 src
 webpack.config.js
 testing
+nextjsmpesa
 node_modules
 .parcel-cache
