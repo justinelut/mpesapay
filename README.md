@@ -1,6 +1,6 @@
 # Mpesa Pay
 
-Mpesa Pay is a JavaScript library that enables developers to easily integrate Mpesa payments into their Node.js applications. It provides an easy-to-use interface for initiating Mpesa STK Push requests, checking payment status, and retrieving the account balance for the M-Pesa business account.
+Mpesa Pay is a JavaScript library that enables developers to easily integrate Mpesa payments into their Node.js applications. It provides an easy-to-use interface for initiating Mpesa STK Push requests, allowing customers to pay for goods and services directly from their mobile phones.
 
 ## Installation
 
@@ -20,7 +20,7 @@ npm install mpesapay
 
 ## Usage
 
-Import default `MpesaPay` from the `mpesapay` module in your Node.js, Next.js, SveltKit, Nuxtjs application:
+Import default `MpesaPay` from the `mpesapay` module in your Node.js, Nextjs, SveltKit, Nuxtjs application:
 
 ```javascript
 import MpesaPay from 'mpesapay';
@@ -81,63 +81,6 @@ The `stkPush` method initiates the payment process and returns a Promise. The Pr
 
 Make sure to handle the response data and errors accordingly in your application.
 
-**Checking Payment Status**
-
-To check the status of a payment transaction, you can call the `checkPaymentStatus` method:
-
-```javascript
-async function checkStatus(transactionId, phoneNumber) {
-  try {
-    const response = await mpesaPay.checkPaymentStatus(transactionId, phoneNumber);
-    console.log(response);
-    // Handle the response data
-  } catch (error) {
-    console.error(error);
-    // Handle errors
-  }
-}
-
-// Call the function to check the payment status
-const transactionId = 'YOUR_TRANSACTION_ID';
-const phoneNumber = '254712345678';
-checkStatus(transactionId, phoneNumber);
-```
-
-Here is an explanation of the parameters:
-
-- `transactionId`: The unique identifier of the payment transaction.
-- `phoneNumber`: The phone number associated
-
- with the transaction.
-
-The `checkPaymentStatus` method checks the status of the payment transaction and returns a Promise. The Promise resolves with the payment status response data if the status check was successful, or rejects with an error if the status check fails.
-
-Make sure to handle the response data and errors accordingly in your application.
-
-**Retrieving Account Balance**
-
-To retrieve the account balance for the M-Pesa business account, you can call the `getAccountBalance` method:
-
-```javascript
-async function getBalance() {
-  try {
-    const response = await mpesaPay.getAccountBalance();
-    console.log(response);
-    // Handle the response data
-  } catch (error) {
-    console.error(error);
-    // Handle errors
-  }
-}
-
-// Call the function to retrieve the account balance
-getBalance();
-```
-
-The `getAccountBalance` method retrieves the account balance and returns a Promise. The Promise resolves with the account balance response data if the retrieval was successful, or rejects with an error if the retrieval fails.
-
-Make sure to handle the response data and errors accordingly in your application.
-
 ## Example
 
 Here is a complete example implementation:
@@ -172,52 +115,32 @@ async function initiatePayment(amount, phoneNumber, callbackUrl) {
   }
 }
 
-async function checkStatus(transactionId, phoneNumber) {
-  try {
-    const response = await mpesaPay.checkPaymentStatus(transactionId, phoneNumber);
-    console.log(response);
-    // Handle the response data
-  } catch (error) {
-    console.error(error);
-    // Handle errors
-  }
-}
-
-async function getBalance() {
-  try {
-    const response = await mpesaPay.getAccountBalance();
-    console.log(response);
-    // Handle the response data
-  } catch (error) {
-    console.error(error);
-    // Handle errors
-  }
-}
-
 const amount = '100';
 const phoneNumber = '254712345678';
 const callbackUrl = 'https://example.com/callback';
-const transactionId = 'YOUR_TRANSACTION_ID';
 
 initiatePayment(amount, phoneNumber, callbackUrl);
-checkStatus(transactionId, phoneNumber);
-getBalance();
 ```
 
 Replace the placeholders with your actual Mpesa credentials and customize the handling of the response data and errors according to your application's requirements.
+
 
 ## TypeScript Support
 
 The Mpesa Pay module includes TypeScript type definitions, providing enhanced development experience and type checking capabilities when using the library in a TypeScript project.
 
+
 That's it! You can now integrate Mpesa payments into your Node.js application using the Mpesa Pay library.
 
-Please note that Mpesa Pay only initiates payments and retrieves account balance and payment status. You'll need to implement the necessary server-side logic to handle the payment confirmation notifications, update your application, and perform additional actions based on the payment status.
+Please note that Mpesa Pay only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your application accordingly.
 
-*Note*: The mpesapay module does not currently support commonjs implementation such as `require` in Node.js. We are currently working on adding this feature. You can request a pull request from GitHub to work on this feature.
+*Note* The mpesapay module does not currently support commonjs implementation such as
+require in nodejs. We are currently working on the feature. You can request a pull request
+from github to work on the feature.
 
-Justine Gichana: [https://github.com/justinelut](https://github.com/justinelut)
+Justine Gichana: https://github.com/justinelut
 
-GitHub URL: [https://github.com/justinelut/mpesapay](https://github.com/justinelut/mpesapay)
+Github URL: https://github.com/justinelut/mpesapay
 
-Documentation URL: [https://mpesapay.verixr.com/](https://mpesapay.verixr.com/)
+Documentation URL: https://verixr.com/mpesapay-docs/
+
