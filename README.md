@@ -29,20 +29,30 @@ import MpesaPay from 'mpesapay';
 Create an instance of the `MpesaPay` class with your Mpesa API credentials:
 
 ```javascript
-const consumerKey = 'YOUR_CONSUMER_KEY';
-const consumerSecret = 'YOUR_CONSUMER_SECRET';
-const businessShortCode = 'YOUR_BUSINESS_SHORT_CODE';
-const passkey = 'YOUR_PASS_KEY';
-const accountReference = 'YOUR_ACCOUNT_REFERENCE';
-const transactionDesc = 'YOUR_TRANSACTION_DESCRIPTION';
+const Consumer_Key = 'YOUR_CONSUMER_KEY';
+const Consumer_Secret = 'YOUR_CONSUMER_SECRET';
+const Business_Short_Code = 'YOUR_BUSINESS_SHORT_CODE';
+const Passkey = 'YOUR_PASS_KEY';
+const Transaction_Description = 'YOUR_TRANSACTION_DESCRIPTION';
+const Account_Reference = 'YOUR_ACCOUNT_REFERENCE';
+const PartyA = "YOUR_MPESA_PARTYA"
+const B2C_Security_Credential = "YOUR MPESA B2C SECURITY CREDENTIAL"
+const Initiator_Name = "YOUR MPESA INITIATORS NAME"
+const Environment = 'sandbox | live'
 
-const mpesaPay = new MpesaPay(
-  consumerKey,
-  consumerSecret,
-  businessShortCode,
-  passkey,
-  accountReference,
-  transactionDesc
+
+
+const mpesapay = new MpesaPay(
+  Consumer_Key,
+  Consumer_Secret,
+  Business_Short_Code,
+  Passkey,
+  Account_Reference,
+  Transaction_Description,
+  PartyA,
+  B2C_Security_Credential,
+  Initiator Name,
+  Environment
 );
 ```
 
@@ -86,27 +96,43 @@ Make sure to handle the response data and errors accordingly in your application
 Here is a complete example implementation:
 
 ```javascript
-import MpesaPay from 'mpesapay';
+const Consumer_Key = 'YOUR_CONSUMER_KEY';
+const Consumer_Secret = 'YOUR_CONSUMER_SECRET';
+const Business_Short_Code = 'YOUR_BUSINESS_SHORT_CODE';
+const Passkey = 'YOUR_PASS_KEY';
+const Transaction_Description = 'YOUR_TRANSACTION_DESCRIPTION';
+const Account_Reference = 'YOUR_ACCOUNT_REFERENCE';
+const PartyA = "YOUR_MPESA_PARTYA"
+const B2C_Security_Credential = "YOUR MPESA B2C SECURITY CREDENTIAL"
+const Initiator_Name = "YOUR MPESA INITIATORS NAME"
+const Environment = 'sandbox | live'
 
-const consumerKey = 'YOUR_CONSUMER_KEY';
-const consumerSecret = 'YOUR_CONSUMER_SECRET';
-const businessShortCode = 'YOUR_BUSINESS_SHORT_CODE';
-const passkey = 'YOUR_PASS_KEY';
-const accountReference = 'YOUR_ACCOUNT_REFERENCE';
-const transactionDesc = 'YOUR_TRANSACTION_DESCRIPTION';
 
-const mpesaPay = new MpesaPay(
-  consumerKey,
-  consumerSecret,
-  businessShortCode,
-  passkey,
-  accountReference,
-  transactionDesc
+
+const mpesapay = new MpesaPay(
+  Consumer_Key,
+  Consumer_Secret,
+  Business_Short_Code,
+  Passkey,
+  Account_Reference,
+  Transaction_Description,
+  PartyA,
+  B2C_Security_Credential,
+  Initiator Name,
+  Environment
 );
+```
 
+Replace the placeholders with your actual Mpesa credentials.
+
+**Initiating a Payment**
+
+To initiate a payment using Mpesa Pay, you can call the `stkPush` method:
+
+```javascript
 async function initiatePayment(amount, phoneNumber, callbackUrl) {
   try {
-    const response = await mpesaPay.stkPush(amount, phoneNumber, callbackUrl);
+    const response = await mpesapay.stkPush(amount, phoneNumber, callbackUrl);
     console.log(response);
     // Handle the response data
   } catch (error) {
@@ -115,10 +141,10 @@ async function initiatePayment(amount, phoneNumber, callbackUrl) {
   }
 }
 
+// Call the function to initiate a payment
 const amount = '100';
 const phoneNumber = '254712345678';
 const callbackUrl = 'https://example.com/callback';
-
 initiatePayment(amount, phoneNumber, callbackUrl);
 ```
 
@@ -132,7 +158,9 @@ The Mpesa Pay module includes TypeScript type definitions, providing enhanced de
 
 That's it! You can now integrate Mpesa payments into your Node.js application using the Mpesa Pay library.
 
-Please note that Mpesa Pay only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your application accordingly.
+
+> Please note that ```stkPush``` only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your database accordingly.
+
 
 *Note* The mpesapay module does not currently support commonjs implementation such as
 require in nodejs. We are currently working on the feature. You can request a pull request
@@ -142,5 +170,4 @@ Justine Gichana: https://github.com/justinelut
 
 Github URL: https://github.com/justinelut/mpesapay
 
-Documentation URL: https://verixr.com/mpesapay-docs/
-
+Full Documentation : https://mpesapay.verixr.com/

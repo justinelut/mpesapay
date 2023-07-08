@@ -1,3 +1,8 @@
-import MpesaPay from "./payments/mpesapay";
-
-export default MpesaPay
+import MpesaPay from './transactions/mpesapay';
+export default MpesaPay;
+export {
+  generateUniqueReferenceNumber,
+  FormatPaymentData,
+  FormatAccountBalance,
+  FormatBusinessToCustomer,
+} from './helpers';
