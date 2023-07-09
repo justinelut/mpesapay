@@ -1,6 +1,6 @@
 # Mpesa Pay
 
-Mpesa Pay is a JavaScript library that enables developers to easily integrate Mpesa payments into their Node.js applications. It provides an easy-to-use interface for initiating Mpesa STK Push requests, allowing customers to pay for goods and services directly from their mobile phones.
+Mpesa Pay is a JavaScript library that enables developers to easily integrate Mpesa payments into their Node.js, Next.js, SvelteKit, and Nuxt.js applications. It provides an easy-to-use interface for initiating STK Push requests, facilitating Business-to-Business transactions, checking Account Balances, and verifying Transaction statuses.
 
 ## Installation
 
@@ -51,12 +51,14 @@ const mpesapay = new MpesaPay(
   Transaction_Description,
   PartyA,
   B2C_Security_Credential,
-  Initiator Name,
+  Initiator_Name,
   Environment
 );
 ```
 
 Replace the placeholders with your actual Mpesa credentials.
+
+> To get your Mpesa credentials, you can follow the procedures outlined in our official documentation available at [Getting Mpesa Credentials](https://mpesapay.verixr.com/getting-started/gettingcredentials). 
 
 **Initiating a Payment**
 
@@ -65,7 +67,7 @@ To initiate a payment using Mpesa Pay, you can call the `stkPush` method:
 ```javascript
 async function initiatePayment(amount, phoneNumber, callbackUrl) {
   try {
-    const response = await mpesaPay.stkPush(amount, phoneNumber, callbackUrl);
+    const response = await mpesapay.stkPush(amount, phoneNumber, callbackUrl);
     console.log(response);
     // Handle the response data
   } catch (error) {
@@ -112,3 +114,10 @@ Justine Gichana: https://github.com/justinelut
 Github URL: https://github.com/justinelut/mpesapay
 
 Full Documentation : https://mpesapay.verixr.com/
+
+Contributing : https://mpesapay.verixr.com/contributing
+
+[Support on Patreon](https://www.patreon.com/posts/contributions-85833830?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link)
+
+
+
