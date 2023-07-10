@@ -109,15 +109,15 @@ That's it! You can now integrate Mpesa payments into your Node.js application us
 require in nodejs. We are currently working on the feature. You can request a pull request
 from github to work on the feature.
 
-Justine Gichana: https://github.com/justinelut
+[Justine Gichana](https://github.com/justinelut)
 
-Github URL: https://github.com/justinelut/mpesapay
+[Github URL](https://github.com/justinelut/mpesapay)
 
-Full Documentation : https://mpesapay.verixr.com/
+[Full Documentation](https://mpesapay.verixr.com/)
 
-Contributing : https://mpesapay.verixr.com/contributing
+[Contributing](https://mpesapay.verixr.com/contributing)
 
-[Support on Patreon](https://www.patreon.com/posts/contributions-85833830?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link)
+[Support Via Paypal](https://www.paypal.com/donate/?hosted_button_id=DYVVE53QU35FS)
 
 
 
