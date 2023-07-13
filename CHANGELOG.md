@@ -1,5 +1,10 @@
 # mpesapay
 
+## null
+
+### Patch Changes
+
+- a7b721a: updated npm publish script
 
 ## 4.0.1
 
