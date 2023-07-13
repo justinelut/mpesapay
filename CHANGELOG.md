@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.2.0
+
+### Minor Changes
+
+- 55fcb33: update commonjs usage
+
 ## 4.1.0
 
 ### Minor Changes
