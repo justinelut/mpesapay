@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.0.4
+
+### Patch Changes
+
+- ca6ce1a: updated the publish.yml file for publishing to npm
+
 ## 4.0.3
 
 ### Patch Changes
