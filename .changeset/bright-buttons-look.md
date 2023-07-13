@@ -2,4 +2,4 @@
 "mpesapay": patch
 ---
 
-updated npm publish script
+updated readme
