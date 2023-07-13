@@ -17,6 +17,16 @@ jobs:
           cache: "yarn"
 
       - run: yarn install --frozen-lockfile
+      - name: Prepare changesets
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          changesetCommand: "yarn changeset"
+          commit: true
+
+      - name: Publish changesets
+        run: yarn changeset publish
+
       - name: Publish to npm
         run: yarn publish --access public
         env:
