@@ -2,6 +2,7 @@ src
 webpack.config.js
 testing
 .github
+.changeset
 nextjsmpesa
 node-mpesa
 node_modules

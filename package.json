@@ -1,8 +1,9 @@
 {
   "name": "mpesapay",
+  "version": "4.2.1",
   "description": "A module for processing MPESA payments",
   "type": "module",
-  "private": "false",
+  "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -42,6 +43,5 @@
     "@changesets/cli": "^2.26.2",
     "tsup": "^7.1.0",
     "typescript": ">=3.0.0"
-  },
-  "version": null
+  }
 }

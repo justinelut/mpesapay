@@ -1,5 +1,31 @@
 # mpesapay
 
+## 4.2.1
+
+### Patch Changes
+
+- e5c8c51: Updated the docs
+- 70a58eb: updated release.yml
+
+## 4.2.0
+
+### Minor Changes
+
+- 55fcb33: update commonjs usage
+
+## 4.1.0
+
+### Minor Changes
+
+- updated the package.json
+
+### Patch Changes
+
+- updated readme
+- 9a325be: update package
+- 3da26aa: update release.yml
+- 1717436: updated the default branch
+
 ## null
 
 ### Patch Changes
