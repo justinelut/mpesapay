@@ -1,6 +1,5 @@
 {
   "name": "mpesapay",
-
   "description": "A module for processing MPESA payments",
   "type": "module",
   "private": "false",
@@ -43,5 +42,6 @@
     "@changesets/cli": "^2.26.2",
     "tsup": "^7.1.0",
     "typescript": ">=3.0.0"
-  }
+  },
+  "version": null
 }
