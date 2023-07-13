@@ -1,5 +1,18 @@
 # mpesapay
 
+## 4.1.0
+
+### Minor Changes
+
+- updated the package.json
+
+### Patch Changes
+
+- updated readme
+- 9a325be: update package
+- 3da26aa: update release.yml
+- 1717436: updated the default branch
+
 ## null
 
 ### Patch Changes
