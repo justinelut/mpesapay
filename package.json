@@ -1,6 +1,6 @@
 {
   "name": "mpesapay",
-  "version": "4.0.1",
+
   "description": "A module for processing MPESA payments",
   "type": "module",
   "private": "false",
@@ -16,6 +16,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "release": "yarn build && changeset publish",
+    "publish": "changeset publish",
     "lint": "tsc"
   },
   "repository": {
