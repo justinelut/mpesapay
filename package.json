@@ -1,6 +1,6 @@
 {
   "name": "mpesapay",
-  "version": "4.0.3",
+
   "description": "A module for processing MPESA payments",
   "type": "module",
   "private": "false",
