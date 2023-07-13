@@ -26,6 +26,18 @@ Import default `MpesaPay` from the `mpesapay` module in your Node.js, Nextjs, Sv
 import MpesaPay from 'mpesapay';
 ```
 
+Or use commonjs syntax:
+
+```javascript
+const {MpesaPay} = require('mpesapay');
+
+or
+
+const MpesaPay = require('mpesapay').default;
+
+```
+
+
 Create an instance of the `MpesaPay` class with your Mpesa API credentials:
 
 ```javascript
@@ -105,9 +117,6 @@ That's it! You can now integrate Mpesa payments into your Node.js application us
 > Please note that ```stkPush``` only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your database accordingly.
 
 
-> The mpesapay module does not currently support commonjs implementation such as
-require in nodejs. We are currently working on the feature. You can request a pull request
-from github to work on the feature.
 
 [Justine Gichana](https://github.com/justinelut)
 
