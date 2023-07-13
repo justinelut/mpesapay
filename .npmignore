@@ -3,5 +3,6 @@ webpack.config.js
 testing
 .github
 nextjsmpesa
+node-mpesa
 node_modules
 .parcel-cache

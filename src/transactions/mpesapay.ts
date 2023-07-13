@@ -121,4 +121,6 @@ class MpesaPay {
   }
 }
 
-export default MpesaPay;
+
+export default MpesaPay
+export {MpesaPay}
