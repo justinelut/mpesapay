@@ -2,7 +2,7 @@ name: Publish
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -11,24 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: yarn/action-setup@v2
+        with:
+          version: 2
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
           cache: "yarn"
 
       - run: yarn install --frozen-lockfile
-      - name: Prepare changesets
+      - name: Create Release Pull Request or Publish
         id: changesets
-        uses: changesets/action@v1
-        with:
-          changesetCommand: "yarn changeset"
-          commit: true
-
-      - name: Publish changesets
-        run: yarn changeset publish
-
-      - name: Publish to npm
-        run: yarn publish --access public
+        run: yarn run release
         env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-         NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
