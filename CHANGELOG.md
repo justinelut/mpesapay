@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.0.1
+
+### Patch Changes
+
+- 762b86a: updated the readme to include the usage of commonjs
+
 ## 4.0.0
 
 ### Major Changes
