@@ -15,8 +15,6 @@ jobs:
         with:
           node-version: 18.x
           cache: "yarn"
-
-      - run: yarn install --frozen-lockfile
       - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1

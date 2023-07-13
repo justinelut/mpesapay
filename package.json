@@ -3,7 +3,7 @@
   "version": "4.2.0",
   "description": "A module for processing MPESA payments",
   "type": "module",
-  "private": "false",
+  "private": false,
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",

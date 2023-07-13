@@ -18,6 +18,12 @@ yarn add mpesapay
 npm install mpesapay
 ```
 
+**PNPM**
+
+```bash
+pnpm install mpesapay
+```
+
 ## Usage
 
 Import default `MpesaPay` from the `mpesapay` module in your Node.js, Nextjs, SveltKit, Nuxtjs application:
@@ -30,6 +36,7 @@ Or use commonjs syntax:
 
 ```javascript
 
+const { MpesaPay } = require('mpesapay')
 
 or
 
