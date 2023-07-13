@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.0.3
+
+### Patch Changes
+
+- 37e039b: updated the docs
+
 ## 4.0.2
 
 ### Patch Changes
