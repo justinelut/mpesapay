@@ -1,5 +1,0 @@
----
-"mpesapay": patch
----
-
-update package
