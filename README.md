@@ -29,7 +29,7 @@ import MpesaPay from 'mpesapay';
 Or use commonjs syntax:
 
 ```javascript
-const {MpesaPay} = require('mpesapay');
+const { MpesaPay } = require('mpesapay');
 
 or
 
