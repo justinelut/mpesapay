@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.2.2
+
+### Patch Changes
+
+- 76caa15: removed yarn-error.log for smaller package size
+
 ## 4.2.1
 
 ### Patch Changes
