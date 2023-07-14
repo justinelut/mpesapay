@@ -3,6 +3,8 @@ webpack.config.js
 testing
 .github
 .changeset
+.gitignore
+yarn-error.log
 nextjsmpesa
 node-mpesa
 node_modules

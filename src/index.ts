@@ -8,6 +8,3 @@ export {
   FormatAccountBalance,
   FormatBusinessToCustomer,
 } from './helpers';
-
-
-console.log("update")
