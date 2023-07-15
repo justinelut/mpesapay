@@ -47,6 +47,7 @@ export default function FormatPaymentData(data: Data): PaymentResult {
     const paymentinfo = extractData(data);
     return {
       status: 'success',
+      message: 'Transaction processed succesfully',
       data: {
         Amount: paymentinfo.Amount,
         MpesaReceiptNumber: paymentinfo.MpesaReceiptNumber,
@@ -59,13 +60,13 @@ export default function FormatPaymentData(data: Data): PaymentResult {
     if (data && resultscode === 17) {
       return {
         status: 'failed',
-        message: 'Unable to process',
+        message: 'Unable to process the transaction',
         resultCode: resultscode,
       };
     } else {
       return {
         status: 'canceled',
-        message: 'Canceled transaction',
+        message: 'Transaction was cancelled by the user',
         resultCode: resultscode,
       };
     }
