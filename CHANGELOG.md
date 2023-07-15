@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.2.4
+
+### Patch Changes
+
+- d315793: Updated the Readme
+
 ## 4.2.3
 
 ### Patch Changes
