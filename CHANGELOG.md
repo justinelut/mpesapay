@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.2.3
+
+### Patch Changes
+
+- 4f1d314: Removed an unnecesary conosle.log
+
 ## 4.2.2
 
 ### Patch Changes
