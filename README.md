@@ -4,7 +4,7 @@ Mpesa Pay is a JavaScript library that enables developers to easily integrate Mp
 
 ## Installation
 
-You can install Mpesa Pay using Yarn or NPM.
+You can install Mpesa Pay using Yarn, NPM & PNPM.
 
 **Yarn**
 
@@ -57,7 +57,7 @@ const Account_Reference = 'YOUR_ACCOUNT_REFERENCE';
 const PartyA = "YOUR_MPESA_PARTYA"
 const B2C_Security_Credential = "YOUR MPESA B2C SECURITY CREDENTIAL"
 const Initiator_Name = "YOUR MPESA INITIATORS NAME"
-const Environment = 'sandbox | live'
+const Environment = 'sandbox'
 
 
 
