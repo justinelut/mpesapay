@@ -6,13 +6,17 @@ export function initMpesaExpressRequestBody(
   password: string,
   businessShortCode: string,
   accountReference: string,
-  transactionDesc: string
+  transactionDesc: string,
+  transactionType:string,
 ): Record<string, string> {
+
+  const TrnsType = transactionType === "paybill" ? "CustomerPayBillOnline" : "CustomerBuyGoodsOnline";
+  
   return {
     BusinessShortCode: businessShortCode,
     Password: password,
     Timestamp: timeStamp,
-    TransactionType: 'CustomerPayBillOnline',
+    TransactionType: TrnsType,
     Amount: amount,
     PartyA: phoneNumber,
     PartyB: businessShortCode,
