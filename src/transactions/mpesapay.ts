@@ -3,6 +3,7 @@ import B2C from './businesstocustomer';
 import MpesaExpress from './mpesaexpress';
 import checkTransactionStatus from './transactionstatus';
 import getAccountBalance from './accountbalance';
+import StkPushQuery from './stkpushQuery';
 
 class MpesaPay {
   private consumerKey: string;
@@ -15,6 +16,7 @@ class MpesaPay {
   private b2cSecurityCredential: string;
   private initiatorName: string;
   private environment: string;
+  private transactionType: string;
 
   constructor(
     consumerKey: string,
@@ -26,7 +28,8 @@ class MpesaPay {
     partyA: string,
     b2cSecurityCredential: string,
     initiatorName: string,
-    environment: 'sandbox' | 'live' = 'sandbox'
+    environment: 'sandbox' | 'live' = 'sandbox',
+    transactionType: 'paybill' | 'till' = 'paybill',
   ) {
     this.consumerKey = consumerKey;
     this.consumerSecret = consumerSecret;
@@ -36,11 +39,12 @@ class MpesaPay {
     this.transactionDesc = transactionDesc;
     this.partyA = partyA;
     this.b2cSecurityCredential = b2cSecurityCredential;
-    (this.initiatorName = initiatorName),
-      (this.environment =
+    this.initiatorName = initiatorName;
+      this.environment =
         environment === 'live'
           ? 'https://api.safaricom.co.ke'
-          : 'https://sandbox.safaricom.co.ke');
+          : 'https://sandbox.safaricom.co.ke';
+          this.transactionType = transactionType
   }
 
   //stkpush method for directly initiating a pop to the specified phonenumber with the amount to payed
@@ -69,7 +73,21 @@ class MpesaPay {
       accessToken,
       this.environment,
       this.accountReference,
-      this.transactionDesc
+      this.transactionDesc,
+      this.transactionType
+    );
+  }
+
+  public async stkPushQuery(
+    CheckoutRequestID: string,
+  ): Promise<any> {
+    const accessToken = await this.AccessToken();
+    return await StkPushQuery(
+      this.businessShortCode,
+      this.passkey,
+      accessToken,
+      this.environment,
+      CheckoutRequestID
     );
   }
 

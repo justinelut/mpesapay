@@ -3,3 +3,4 @@ dist
 .parcel-cache
 node-mpesa
 nextjsmpesa
+package-lock.json

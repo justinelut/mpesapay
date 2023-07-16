@@ -1,37 +1,28 @@
 import { timeStamp } from '../../utils/timestamp';
 import axios, { AxiosResponse } from 'axios';
-import { initMpesaExpressRequestBody } from './ExpressRequestBody';
+import { initStkPushQueryRequestBody } from "./stkPushQueryBody";
 import Config from '../../utils/Config';
 import generatePassword from '../../utils/Password';
 
-export default async function MpesaExpress(
-  amount: string,
-  phoneNumber: string,
-  callbackUrl: string,
+export default async function StkPushQuery(
   businessShortCode: string,
   passkey: string,
   accessToken: string,
   environment: string,
-  accountReference: string,
-  transactionDesc: string,
-  transactionType: string
+  CheckoutRequestID: string,
 ): Promise<any> {
   const password = generatePassword(businessShortCode, passkey);
-  const requestBody = initMpesaExpressRequestBody(
-    amount,
-    phoneNumber,
-    callbackUrl,
-    timeStamp,
-    password,
+  const requestBody = initStkPushQueryRequestBody(
     businessShortCode,
-    accountReference,
-    transactionDesc,
-    transactionType
+    password,
+    timeStamp,
+    CheckoutRequestID
   );
+
 
   try {
     const response: AxiosResponse<any> = await axios.post(
-      `${environment}/mpesa/stkpush/v1/processrequest`,
+      `${environment}/mpesa/stkpushquery/v1/query`,
       requestBody,
       await Config(accessToken)
     );
