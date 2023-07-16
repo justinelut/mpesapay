@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.0
+
+### Minor Changes
+
+- 37c41b4: publishing addition functionality made by hamisirizwan, stkpushquery functionality & transactiontype added paramaeter to stkpushmethod
+
 ## 4.2.4
 
 ### Patch Changes
