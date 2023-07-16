@@ -3,6 +3,7 @@ import B2C from './businesstocustomer';
 import MpesaExpress from './mpesaexpress';
 import checkTransactionStatus from './transactionstatus';
 import getAccountBalance from './accountbalance';
+import StkPushQuery from './stkpushQuery';
 
 class MpesaPay {
   private consumerKey: string;
@@ -70,6 +71,19 @@ class MpesaPay {
       this.environment,
       this.accountReference,
       this.transactionDesc
+    );
+  }
+
+  public async stkPushQuery(
+    CheckoutRequestID: string,
+  ): Promise<any> {
+    const accessToken = await this.AccessToken();
+    return await StkPushQuery(
+      this.businessShortCode,
+      this.passkey,
+      accessToken,
+      this.environment,
+      CheckoutRequestID
     );
   }
 
