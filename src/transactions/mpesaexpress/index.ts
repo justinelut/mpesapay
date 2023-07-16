@@ -13,7 +13,8 @@ export default async function MpesaExpress(
   accessToken: string,
   environment: string,
   accountReference: string,
-  transactionDesc: string
+  transactionDesc: string,
+  transactionType: string
 ): Promise<any> {
   const password = generatePassword(businessShortCode, passkey);
   const requestBody = initMpesaExpressRequestBody(
@@ -24,7 +25,8 @@ export default async function MpesaExpress(
     password,
     businessShortCode,
     accountReference,
-    transactionDesc
+    transactionDesc,
+    transactionType
   );
 
   try {
