@@ -18,8 +18,6 @@ export default async function StkPushQuery(
     timeStamp,
     CheckoutRequestID
   );
-
-
   try {
     const response: AxiosResponse<any> = await axios.post(
       `${environment}/mpesa/stkpushquery/v1/query`,
