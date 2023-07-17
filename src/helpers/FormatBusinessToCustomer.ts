@@ -16,7 +16,7 @@ interface ReferenceData {
   ReferenceItem: ReferenceItem;
 }
 
-interface Result {
+export interface Result {
   ResultType: number;
   ResultCode: number;
   ResultDesc: string;
@@ -27,11 +27,11 @@ interface Result {
   ReferenceData: ReferenceData;
 }
 
-interface BusinessToCustomerResponse {
+export interface BusinessToCustomerResponse {
   Result: Result;
 }
 
-interface TransactionDetails {
+export interface TransactionDetails {
   TransactionAmount: string | number;
   TransactionReceipt: string;
   ReceiverPartyPublicName: string;
@@ -43,7 +43,7 @@ interface TransactionDetails {
 }
 
 
-interface PaymentResult {
+export interface PaymentResult {
   status: 'success' | 'failed';
   resultCode: number;
   data?: TransactionDetails;

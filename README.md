@@ -57,8 +57,8 @@ const Account_Reference = 'YOUR_ACCOUNT_REFERENCE';
 const PartyA = "YOUR_MPESA_PARTYA"
 const B2C_Security_Credential = "YOUR MPESA B2C SECURITY CREDENTIAL"
 const Initiator_Name = "YOUR MPESA INITIATORS NAME"
-const Environment = 'sandbox'
-const transaction_Type = "YOUR SHORTCODE TYPE i.e paybill or till"
+const Environment = 'THE ENVIRONMENT i.e sandbox or live'
+const Transaction_Type = "YOUR SHORTCODE TYPE i.e paybill or till"
 
 
 
@@ -73,7 +73,7 @@ const mpesapay = new MpesaPay(
   B2C_Security_Credential,
   Initiator_Name,
   Environment,
-  transaction_Type
+  Transaction_Type
 );
 ```
 

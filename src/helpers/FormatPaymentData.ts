@@ -12,7 +12,7 @@ interface Body {
   };
 }
 
-interface Data {
+export interface Data {
   Body: Body;
 }
 
@@ -23,7 +23,7 @@ interface PaymentInfo {
   PhoneNumber: string;
 }
 
-interface PaymentResult {
+export interface PaymentResult {
   status: 'canceled' | 'failed' | 'success';
   data?: PaymentInfo;
   message?: string;
@@ -47,7 +47,7 @@ export default function FormatPaymentData(data: Data): PaymentResult {
     const paymentinfo = extractData(data);
     return {
       status: 'success',
-      message: 'Transaction processed succesfully',
+      message: 'Transaction processed successfully',
       data: {
         Amount: paymentinfo.Amount,
         MpesaReceiptNumber: paymentinfo.MpesaReceiptNumber,
@@ -66,7 +66,7 @@ export default function FormatPaymentData(data: Data): PaymentResult {
     } else {
       return {
         status: 'canceled',
-        message: 'Transaction was cancelled by the user',
+        message: 'Transaction was canceled by the user',
         resultCode: resultscode,
       };
     }

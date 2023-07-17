@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.1
+
+### Patch Changes
+
+- a354c5a: added testing for the helpers using jest
+
 ## 4.3.0
 
 ### Minor Changes
