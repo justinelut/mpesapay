@@ -165,7 +165,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/hamisirizwan"><img src="https://avatars.githubusercontent.com/u/72559592?v=4?s=100" width="100px;" alt="Dev_riz"/><br /><sub><b>Dev_riz</b></sub></a><br /><a href="https://github.com/justinelut/mpesapay/commits?author=hamisirizwan" title="Code">💻</a></td>
+
     </tr>
   </tbody>
 </table>
