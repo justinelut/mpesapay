@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.6
+
+### Patch Changes
+
+- 914d66b: added .all-contributorsrc to npmignore file
+
 ## 4.3.5
 
 ### Patch Changes
