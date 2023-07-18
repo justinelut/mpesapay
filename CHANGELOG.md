@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.4
+
+### Patch Changes
+
+- c2fc798: adding all contributers
+
 ## 4.3.3
 
 ### Patch Changes
