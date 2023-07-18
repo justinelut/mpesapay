@@ -128,8 +128,18 @@ That's it! You can now integrate Mpesa payments into your Node.js application us
 
 > Please note that ```stkPush``` only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your database accordingly.
 
+## Contributors
 
 [![All Contributors](https://img.shields.io/github/all-contributors/justinelut/mpesapay?color=ee8449&style=flat-square)](#contributors)
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
 
 
 [Justine Gichana](https://github.com/justinelut)
@@ -155,7 +165,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="http://verixr.com"><img src="https://avatars.githubusercontent.com/u/51832166?v=4?s=100" width="100px;" alt="Justine Gichana"/><br /><sub><b>Justine Gichana</b></sub></a><br /><a href="https://github.com/justinelut/mpesapay/commits?author=justinelut" title="Code">💻</a></td>
+
     </tr>
   </tbody>
 </table>
