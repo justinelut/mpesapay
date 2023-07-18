@@ -1,6 +1,6 @@
 # Mpesa Pay
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
@@ -141,6 +141,7 @@ That's it! You can now integrate Mpesa payments into your Node.js application us
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hamisirizwan"><img src="https://avatars.githubusercontent.com/u/72559592?v=4?s=100" width="100px;" alt="Dev_riz"/><br /><sub><b>Dev_riz</b></sub></a><br /><a href="https://github.com/justinelut/mpesapay/commits?author=hamisirizwan" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://verixr.com"><img src="https://avatars.githubusercontent.com/u/51832166?v=4?s=100" width="100px;" alt="Justine Gichana"/><br /><sub><b>Justine Gichana</b></sub></a><br /><a href="https://github.com/justinelut/mpesapay/commits?author=justinelut" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
