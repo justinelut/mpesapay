@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.2
+
+### Patch Changes
+
+- eea38f1: added the all contributers bot to the readme
+
 ## 4.3.1
 
 ### Patch Changes
