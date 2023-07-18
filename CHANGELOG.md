@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.3
+
+### Patch Changes
+
+- ac8c9dd: updated the contributers list
+
 ## 4.3.2
 
 ### Patch Changes
