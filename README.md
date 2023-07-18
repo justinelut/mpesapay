@@ -126,6 +126,8 @@ That's it! You can now integrate Mpesa payments into your Node.js application us
 > Please note that ```stkPush``` only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your database accordingly.
 
 
+[![All Contributors](https://img.shields.io/github/all-contributors/justinelut/mpesapay?color=ee8449&style=flat-square)](#contributors)
+
 
 [Justine Gichana](https://github.com/justinelut)
 

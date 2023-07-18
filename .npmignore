@@ -5,6 +5,7 @@ testing
 .changeset
 .gitignore
 yarn-error.log
+jest.config.js
 nextjsmpesa
 node-mpesa
 node_modules
