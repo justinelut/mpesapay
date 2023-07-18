@@ -3,6 +3,7 @@ testing
 .github
 .changeset
 .gitignore
+.all-contributorsrc
 yarn-error.log
 jest.config.js
 nextjsmpesa
