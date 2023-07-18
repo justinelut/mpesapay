@@ -1,5 +1,17 @@
 # mpesapay
 
+## 4.3.5
+
+### Patch Changes
+
+- fd4d94d: edited the list of contributers
+
+## 4.3.4
+
+### Patch Changes
+
+- c2fc798: adding all contributers
+
 ## 4.3.3
 
 ### Patch Changes

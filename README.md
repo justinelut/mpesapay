@@ -1,10 +1,4 @@
 # Mpesa Pay
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Mpesa Pay is a JavaScript library that enables developers to easily integrate Mpesa payments into their Node.js, Next.js, SvelteKit, and Nuxt.js applications. It provides an easy-to-use interface for initiating STK Push requests, facilitating Business-to-Business transactions, checking Account Balances, and verifying Transaction statuses.
 
@@ -41,15 +35,12 @@ import MpesaPay from 'mpesapay';
 Or use commonjs syntax:
 
 ```javascript
+const { MpesaPay } = require('mpesapay');
 
-const { MpesaPay } = require('mpesapay')
-
-or
+or;
 
 const MpesaPay = require('mpesapay').default;
-
 ```
-
 
 Create an instance of the `MpesaPay` class with your Mpesa API credentials:
 
@@ -60,13 +51,11 @@ const Business_Short_Code = 'YOUR_BUSINESS_SHORT_CODE';
 const Passkey = 'YOUR_PASS_KEY';
 const Transaction_Description = 'YOUR_TRANSACTION_DESCRIPTION';
 const Account_Reference = 'YOUR_ACCOUNT_REFERENCE';
-const PartyA = "YOUR_MPESA_PARTYA"
-const B2C_Security_Credential = "YOUR MPESA B2C SECURITY CREDENTIAL"
-const Initiator_Name = "YOUR MPESA INITIATORS NAME"
-const Environment = 'THE ENVIRONMENT i.e sandbox or live'
-const Transaction_Type = "YOUR SHORTCODE TYPE i.e paybill or till"
-
-
+const PartyA = 'YOUR_MPESA_PARTYA';
+const B2C_Security_Credential = 'YOUR MPESA B2C SECURITY CREDENTIAL';
+const Initiator_Name = 'YOUR MPESA INITIATORS NAME';
+const Environment = 'THE ENVIRONMENT i.e sandbox or live';
+const Transaction_Type = 'YOUR SHORTCODE TYPE i.e paybill or till';
 
 const mpesapay = new MpesaPay(
   Consumer_Key,
@@ -85,7 +74,7 @@ const mpesapay = new MpesaPay(
 
 Replace the placeholders with your actual Mpesa credentials.
 
-> To get your Mpesa credentials, you can follow the procedures outlined in our official documentation available at [Getting Mpesa Credentials](https://mpesapay.verixr.com/getting-started/gettingcredentials). 
+> To get your Mpesa credentials, you can follow the procedures outlined in our official documentation available at [Getting Mpesa Credentials](https://mpesapay.verixr.com/getting-started/gettingcredentials).
 
 **Initiating a Payment**
 
@@ -120,28 +109,28 @@ The `stkPush` method initiates the payment process and returns a Promise. The Pr
 
 Make sure to handle the response data and errors accordingly in your application.
 
-
 ## TypeScript Support
 
 The Mpesa Pay module includes TypeScript type definitions, providing enhanced development experience and type checking capabilities when using the library in a TypeScript project.
 
-
 That's it! You can now integrate Mpesa payments into your Node.js application using the Mpesa Pay library.
 
+> Please note that `stkPush` only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your database accordingly.
 
-> Please note that ```stkPush``` only initiates payments, and the results will be sent to the provided callback URL. Make sure to implement the necessary server-side logic to handle the payment confirmation notifications and update your database accordingly.
+## Contributors ✨
 
-## Contributors
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 [![All Contributors](https://img.shields.io/github/all-contributors/justinelut/mpesapay?color=ee8449&style=flat-square)](#contributors)
+
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
   <tbody>
     <tr>
+    <td align="center" valign="top" width="14.28%"><a href="http://verixr.com"><img src="https://avatars.githubusercontent.com/u/51832166?v=4?s=100" width="100px;" alt="Justine Gichana"/><br /><sub><b>Justine Gichana</b></sub></a><br /><a href="https://github.com/justinelut/mpesapay/commits?author=justinelut" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hamisirizwan"><img src="https://avatars.githubusercontent.com/u/72559592?v=4?s=100" width="100px;" alt="Dev_riz"/><br /><sub><b>Dev_riz</b></sub></a><br /><a href="https://github.com/justinelut/mpesapay/commits?author=hamisirizwan" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://verixr.com"><img src="https://avatars.githubusercontent.com/u/51832166?v=4?s=100" width="100px;" alt="Justine Gichana"/><br /><sub><b>Justine Gichana</b></sub></a><br /><a href="https://github.com/justinelut/mpesapay/commits?author=justinelut" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
@@ -150,16 +139,6 @@ That's it! You can now integrate Mpesa payments into your Node.js application us
 <!-- prettier-ignore-end -->
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
 
 [Justine Gichana](https://github.com/justinelut)
 
@@ -170,28 +149,3 @@ That's it! You can now integrate Mpesa payments into your Node.js application us
 [Contributing](https://mpesapay.verixr.com/contributing)
 
 [Support Via Paypal](https://www.paypal.com/donate/?hosted_button_id=DYVVE53QU35FS)
-
-
-
-
-## Contributors ✨
-
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
-
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
-<table>
-  <tbody>
-    <tr>
-
-    </tr>
-  </tbody>
-</table>
-
-<!-- markdownlint-restore -->
-<!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
