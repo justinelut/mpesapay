@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.7
+
+### Patch Changes
+
+- f067f1d: added tsconfig in the .npmignore file
+
 ## 4.3.6
 
 ### Patch Changes

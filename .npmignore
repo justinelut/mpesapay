@@ -6,6 +6,7 @@ testing
 .all-contributorsrc
 yarn-error.log
 jest.config.js
+tsconfig.json
 nextjsmpesa
 node-mpesa
 node_modules
