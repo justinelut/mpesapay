@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.3.8
+
+### Patch Changes
+
+- 9fe3a1f: removed tsconfig
+
 ## 4.3.7
 
 ### Patch Changes
