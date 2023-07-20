@@ -1,0 +1,5 @@
+---
+"mpesapay": patch
+---
+
+removed tsconfig
