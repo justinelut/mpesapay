@@ -1,9 +1,41 @@
-import generateAccessToken from '../utils/accesstoken';
-import B2C from './businesstocustomer';
-import MpesaExpress from './mpesaexpress';
-import checkTransactionStatus from './transactionstatus';
-import getAccountBalance from './accountbalance';
-import StkPushQuery from './stkpushQuery';
+import generateAccessToken from "../utils/accesstoken";
+import B2C from "./businesstocustomer";
+import MpesaExpress from "./mpesaexpress";
+import checkTransactionStatus from "./transactionstatus";
+import getAccountBalance from "./accountbalance";
+import StkPushQuery from "./stkpushQuery";
+
+type TMpesaPay = {
+  consumerKey: string;
+  consumerSecret: string;
+  businessShortCode: string;
+  passkey: string;
+  accountReference: string;
+  transactionDesc: string;
+  partyA: string;
+  b2cSecurityCredential: string;
+  initiatorName: string;
+  environment: "sandbox" | "live";
+  transactionType: "paybill" | "till";
+};
+
+type TStkPush = {
+  amount: string;
+  phoneNumber: string;
+  callbackUrl: string;
+};
+
+type TTransactionStatus = {
+  transactionId: string;
+  callbackUrl: string;
+};
+
+type TB2C = {
+  PaymentAmount: number;
+  receiversPhonenumber: number;
+  remarks: string;
+  callbackUrl: string;
+};
 
 class MpesaPay {
   private consumerKey: string;
@@ -18,19 +50,19 @@ class MpesaPay {
   private environment: string;
   private transactionType: string;
 
-  constructor(
-    consumerKey: string,
-    consumerSecret: string,
-    businessShortCode: string,
-    passkey: string,
-    accountReference: string,
-    transactionDesc: string,
-    partyA: string,
-    b2cSecurityCredential: string,
-    initiatorName: string,
-    environment: 'sandbox' | 'live' = 'sandbox',
-    transactionType: 'paybill' | 'till' = 'paybill',
-  ) {
+  constructor({
+    consumerKey,
+    consumerSecret,
+    businessShortCode,
+    passkey,
+    accountReference,
+    transactionDesc,
+    partyA,
+    b2cSecurityCredential,
+    initiatorName,
+    environment,
+    transactionType,
+  }: TMpesaPay) {
     this.consumerKey = consumerKey;
     this.consumerSecret = consumerSecret;
     this.businessShortCode = businessShortCode;
@@ -40,11 +72,11 @@ class MpesaPay {
     this.partyA = partyA;
     this.b2cSecurityCredential = b2cSecurityCredential;
     this.initiatorName = initiatorName;
-      this.environment =
-        environment === 'live'
-          ? 'https://api.safaricom.co.ke'
-          : 'https://sandbox.safaricom.co.ke';
-          this.transactionType = transactionType
+    this.environment =
+      environment === "live"
+        ? "https://api.safaricom.co.ke"
+        : "https://sandbox.safaricom.co.ke";
+    this.transactionType = transactionType;
   }
 
   //stkpush method for directly initiating a pop to the specified phonenumber with the amount to payed
@@ -58,11 +90,11 @@ class MpesaPay {
     );
   }
 
-  public async stkPush(
-    amount: string,
-    phoneNumber: string,
-    callbackUrl: string
-  ): Promise<any> {
+  public async stkPush({
+    amount,
+    phoneNumber,
+    callbackUrl,
+  }: TStkPush): Promise<any> {
     const accessToken = await this.AccessToken();
     return await MpesaExpress(
       amount,
@@ -78,9 +110,7 @@ class MpesaPay {
     );
   }
 
-  public async stkPushQuery(
-    CheckoutRequestID: string,
-  ): Promise<any> {
+  public async stkPushQuery(CheckoutRequestID: string): Promise<any> {
     const accessToken = await this.AccessToken();
     return await StkPushQuery(
       this.businessShortCode,
@@ -91,10 +121,10 @@ class MpesaPay {
     );
   }
 
-  public async transactionStatus(
-    transactionId: string,
-    callbackUrl: string
-  ): Promise<any> {
+  public async transactionStatus({
+    transactionId,
+    callbackUrl,
+  }: TTransactionStatus): Promise<any> {
     const accessToken = await this.AccessToken();
     return await checkTransactionStatus(
       transactionId,
@@ -107,12 +137,12 @@ class MpesaPay {
     );
   }
 
-  public async business2Customer(
-    PaymentAmount: number,
-    receiversPhonenumber: number,
-    remarks: string,
-    callbackUrl: string
-  ): Promise<any> {
+  public async business2Customer({
+    PaymentAmount,
+    receiversPhonenumber,
+    remarks,
+    callbackUrl,
+  }: TB2C): Promise<any> {
     const accessToken = await this.AccessToken();
     return await B2C(
       PaymentAmount,
@@ -139,6 +169,5 @@ class MpesaPay {
   }
 }
 
-
-export default MpesaPay
-export {MpesaPay}
+export default MpesaPay;
+export { MpesaPay };
