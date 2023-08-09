@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.4.0
+
+### Minor Changes
+
+- 0f4d7cd: adding tsconfig to the npm ignore file
+
 ## 4.3.8
 
 ### Patch Changes
