@@ -1,5 +1,11 @@
 # mpesapay
 
+## 4.4.1
+
+### Patch Changes
+
+- 0d41d42: Code refactoring by Dre
+
 ## 4.4.0
 
 ### Minor Changes
